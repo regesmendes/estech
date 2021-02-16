@@ -5,6 +5,7 @@ As a solution for the test, I wrote a small application using Laravel 8 with som
 
 I applied a number of features and resources that I thought were important after reading the requirements.
 So, I started by building two MySQL Stored Procedures: importPrices, to import the cvs file into the DB; and getPrices, to query the lowest price on the DB.
+I created an artisan command to import the csv files, it can be automated by a number of tools in different ways, depending on the needs.
 I also created a few indexes to optimize the price search on DB, as the query cost without them was concerning.
 
 For the app itself, I created a simple architecture with a web-router to redirect all public incoming requests to the Vue application, which will interact with the backend through an API. I made a diagram for an overview.
